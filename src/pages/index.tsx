@@ -1,15 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar";
 import { Hero, StarsCanvas } from "@/components";
-import Experience from "@/components/Experience";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
+import Feedbacks from "@/components/Feedbacks";
+import Navbar from "@/components/Navbar";
 import Tech from "@/components/Tech";
 import Works from "@/components/Works";
-import Feedbacks from "@/components/Feedbacks";
-import Contact from "@/components/Contact";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
