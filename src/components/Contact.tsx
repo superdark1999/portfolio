@@ -7,6 +7,8 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { styles } from "@/styles/style";
 
+console.log("sdf", process.env.NEXT_PUBLIC_SERVICE_ID);
+
 const Contact = () => {
   const [form, setForm] = useState({
     name: "",
@@ -36,8 +38,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_nb5u724",
-        "template_54aiqzp",
+        process.env.NEXT_PUBLIC_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
         {
           from_name: form.name,
           to_name: "Long Nguyen",
@@ -45,7 +47,7 @@ const Contact = () => {
           to_email: "philongit1999@gmail.com ",
           message: form.message,
         },
-        "LYYEWx7yeVT6sLm8E"
+        process.env.NEXT_PUBLIC_GMAIL_PUBLIC_KEY || ""
       )
       .then(
         () => {
