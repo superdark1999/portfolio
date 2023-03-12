@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import {
   mobile,
   backend,
@@ -114,7 +115,16 @@ const technologies = [
   },
 ];
 
-const experiences = [
+export interface Experience {
+  title: string;
+  company_name: string;
+  icon: StaticImageData;
+  iconBg: string;
+  date: string;
+  points: string[];
+}
+
+const experiences: Experience[] = [
   {
     title: "React.js Developer",
     company_name: "Starbucks",
